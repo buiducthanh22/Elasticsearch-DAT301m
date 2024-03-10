@@ -1,0 +1,47 @@
+<p class="show">Show results:</p>
+<p class="show">Total Images: {{totalImages}}</p>
+<table>
+  <tr>
+    <!-- <th>Image</th>
+    <th>Name</th>
+    <th>Confidence Score</th>
+    <th>Status</th>
+    <th>Updated</th>
+    <th>Download</th>
+    <th>Delete</th> -->
+    <th>id</th>
+    <th>name</th>
+    <th>image</th>
+  </tr>
+  <!-- <tr *ngFor="let item of items">
+    <td><img src = {{item.image}} width="50" height="50"></td>
+    <td>{{item.name}}</td>
+    <td>{{item.confidenceScore}}</td>
+    <td>
+      <select [(ngModel)]="item.status">
+        <option *ngFor="let status of statuses">{{status}}</option>
+      </select>
+    </td>
+    <td>{{item.updated}}</td>
+    <td>
+      <button name="button" type="button">Download</button>
+    </td>
+    <td>
+      <button name="button" type="button">Delete</button>
+    </td>
+  </tr> -->
+
+  <tr *ngFor="let item of items">
+    <td>{{item.id}}</td>
+    <td>{{item.name}}</td>
+    <!-- <td>{{item.image}}</td> -->
+    <td><img [src]="'data:image;base64,' + item.image" width="10%" height="10%"></td>
+  </tr>
+
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="currentPage == 1">Prev</button>
+    <span>Table: {{currentPage}}/{{totalPages}}</span>
+    <button (click)="nextPage()" [disabled]="currentPage == totalPages">Next</button>
+  </div>
+</table>
+

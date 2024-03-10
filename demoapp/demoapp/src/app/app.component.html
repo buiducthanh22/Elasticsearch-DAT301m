@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-vi">
+  <head>
+    <!-- Include the custom stylesheet -->
+    <link rel="stylesheet" type="text/css" href="app.component.css">
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Include Select2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css" rel="stylesheet" />
+    <!-- Include jQuery and Select2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js"></script>
+    <!-- Set character encoding -->
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Main container -->
+    <div id="main">
+
+      <!-- Header section -->
+      <div id="header">
+        <!-- Logo image -->
+        <img src="assets\logo.png" width="80" height="80" alt="haha">
+        <!-- Main title -->
+        <h1 class="h1">{{title}}</h1>
+        <!-- Contact information -->
+        <h1 class="h2">Contact us:</h1>
+        <!-- Social media link -->
+        <a href="https://www.facebook.com/TrangVu.AI.F" class="fa fa-facebook header .fa"></a>
+      </div>
+
+      <!-- Option section -->
+      <div id="option">
+        <!-- Search container -->
+        <div class="search-container">
+          <!-- Search input -->
+          <div class="input-wrapper">
+            <!-- Search icon -->
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="search-input" [(ngModel)]="searchText" (keypress)="onEnter($event)">
+            <!-- Filter section -->
+            <div class="filter-container">
+              <input type="number" min="0" max="1" step="0.01" [(ngModel)]="sliderValue" class="input">
+              <!-- Select dropdown for filter values -->
+              <select [(ngModel)]="sliderValue" class="select">
+                <option value="0">0</option>
+                <option value="0.1">0.1</option>
+                <option value="0.2">0.2</option>
+                <option value="0.3">0.3</option>
+                <option value="0.4">0.4</option>
+                <option value="0.5">0.5</option>
+                <option value="0.6">0.6</option>
+                <option value="0.7">0.7</option>
+                <option value="0.8">0.8</option>
+                <option value="0.9">0.9</option>
+                <option value="1">1</option>
+              </select>
+              <!-- Search and Update buttons -->
+              <button class="search" (click)="onSearch()" >Search</button>
+              <button (click)="openFileSelection()" class="updata">Upload</button>
+              <!-- File input for uploading -->
+              <input type="file" id="fileInput" style="display: none" (change)="onFileSelected($event)" multiple accept="image/*">
+              <!-- Upload message display -->
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="isLoading">loading 99%</div>
+        <p class="mess">{{ uploadMessage }}</p>
+      </div>
+
+      <!-- Image display section -->
+      <div *ngFor="let imageUrl of imageUrls">
+        <img [src]="imageUrl" width="50%" height="50%">
+      </div>
+
+      <!-- Content management component: show table -->
+      <div>
+        <app-content-management [customData]="data"></app-content-management>
+      </div>
+
+      <!-- Uncomment the following code if needed for chat functionality -->
+      <!--
+      <div id="chat-icon" (click)="toggleChat()" style="margin-left: 5%; margin-top: 20px; font-size: 20px;">
+        <i class="fas fa-comments"></i>
+      </div>
+
+      <div id="chat-container" style="display: none;">
+        <div class="chat-messages">
+          <div *ngFor="let message of chatMessages">{{ message }}</div>
+        </div>
+        <input [(ngModel)]="userMessage" (keyup.enter)="sendMessage()" placeholder="Nhập tin nhắn..." />
+        <button (click)="sendMessage()">Gửi</button>
+      </div>
+      -->
+    </div>
+    <notifier-container></notifier-container>
+</body>
+</html>
+
+

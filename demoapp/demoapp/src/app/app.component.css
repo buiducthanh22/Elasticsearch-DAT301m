@@ -1,0 +1,460 @@
+/* Header styling */
+@import 'node_modules/angular-notifier/styles.css';
+#header{
+  height: 80px;
+  background-color: rgb(126, 233, 233);
+  color: rgb(70, 43, 43);
+  display: flex;
+  align-items: center;
+  border-radius: 20px/20px;
+  margin-top: 1px;
+
+}
+/* Logo styling */
+#header .logo {
+  max-width: 100px;
+  margin-right: 10px;
+}
+
+/* Header text (h1) styling */
+#header .h1{
+  font-size: 2rem;
+  display: flex;
+  margin: 10px;
+  font-family: 'Itim', cursive;
+}
+
+/* Additional header text (h2) styling */
+#header .h2{
+  font-size: 0.8rem;
+  margin-top: 19px;
+  color: #110101;
+  position: absolute;
+  right: 5.2%;
+}
+
+/* Font Awesome icon styling */
+#header .fa{
+  font-size: 20px;
+  position: absolute;
+  right: 4%;
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+/* Styling for the option section */
+#option{
+  padding: 20px;  /* Padding around the option section */
+}
+
+/* Styling for the search container within the option section */
+#option .search-container {
+  position: relative;  /* Positioning context for absolute positioned children */
+  padding-left: 30px;  /* Padding on the left side */
+  display: flex;  /* Use flexbox for layout */
+  align-items: center;  /* Vertically align items in the center */
+  flex-wrap: wrap;  /* Allow items to wrap onto multiple lines */
+}
+
+/* Styling for the input wrapper within the search container */
+#option .input-wrapper {
+  position: relative;  /* Positioning context for absolute positioned children */
+  display: flex;  /* Use flexbox for layout */
+  border: 1px solid #070707;  /* Border around the input wrapper */
+  padding: 0px;  /* No padding */
+  width: 755px;  /* Fixed width */
+  border-radius: 8px/8px;  /* Rounded corners */
+}
+
+/* Styling for the filter container within the search container */
+#option .filter-container {
+  position: absolute;  /* Positioning relative to the nearest positioned ancestor */
+  top: 50%;  /* Position at the vertical center */
+  transform: translateY(-50%);  /* Offset by half of its own height to center vertically */
+  border: 0;  /* No border */
+  margin-left: 55%;  /* Margin on the left side */
+}
+
+/* Styling for the search input within the input wrapper */
+#option .search-input {
+  padding-left: 30px;  /* Padding on the left side */
+  padding-right: 50px;  /* Padding on the right side */
+  padding: 10px;  /* Padding on all sides */
+  font-size: 16px;  /* Font size */
+  width: 500px;  /* Fixed width */
+  border: 1px solid #ffffff;  /* Border around the search input */
+  border-radius: 8px/8px;  /* Rounded corners */
+  max-width: 50%;  /* Maximum width */
+  margin-left: 25px;  /* Margin on the left side */
+}
+
+/* Styling for the search input when it has focus */
+#option .search-input:focus {
+  outline: none;  /* Remove the default outline */
+  box-shadow: 0 0 10px #d3d3d3;  /* Add a box shadow */
+}
+
+/* Styling for the slide and filter within the option section */
+#option .slide, #option .filter {
+  display: flex;  /* Use flexbox for layout */
+  margin-top: 10px;  /* Margin on the top side */
+  margin-left: 5px;  /* Margin on the left side */
+  align-items: center;  /* Vertically align items in the center */
+  margin-right: 10px;  /* Margin on the right side */
+}
+
+/* Styling for the slider input within the slide */
+#option .slide .slider-input {
+  -webkit-appearance: none;  /* Remove the default appearance */
+  width: 30%;  /* Width relative to its container */
+  height: 5px;  /* Fixed height */
+  background: #1fbb99;  /* Background color */
+  outline: none;  /* Remove the default outline */
+  border-radius: 5px;  /* Rounded corners */
+  max-width: 500px;  /* Maximum width */
+  margin-bottom: 8px;  /* Margin on the bottom side */
+}
+
+/* Styling for the slider thumb */
+#option .slide .slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none;  /* Remove the default appearance */
+  appearance: none;  /* Remove the default appearance */
+  width: 3px;  /* Fixed width */
+  height: 15px;  /* Fixed height */
+  background: #ad9c03;  /* Background color */
+  border-radius: 0%;  /* No rounded corners */
+  cursor: pointer;  /* Change the cursor to a pointer when hovering */
+}
+
+/* Styling for the search icon within the search container */
+#option .search-icon {
+  position: absolute;  /* Positioning relative to the nearest positioned ancestor */
+  left: 6px;  /* Position from the left side */
+  top: 50%;  /* Position at the vertical center */
+  transform: translateY(-50%);  /* Offset by half of its own height to center vertically */
+}
+
+/* Styling for the search and update buttons within the option section */
+#option .search, #option .updata {
+  padding: 11px 15px;  /* Padding on all sides */
+  size: 9%;  /* Size relative to its container */
+  font-size: 16px;  /* Font size */
+  background-color: #72baf5;  /* Background color */
+  color: #2b1313;  /* Text color */
+  border: none;  /* No border */
+  cursor: pointer;  /* Change the cursor to a pointer when hovering */
+  border-radius: 8px/8px;  /* Rounded corners */
+  margin-left: 20px;  /* Margin on the left side */
+}
+
+/* Styling for the select within the option section */
+#option .select{
+  align-items: center;  /* Vertically align items in the center */
+  padding: 1px 1px;  /* Padding on all sides */
+  background-color: #f7f7f7;  /* Background color */
+  border-radius: 16px/16px;  /* Rounded corners */
+  border: none;  /* No border */
+  margin-left: 3px;  /* Margin on the left side */
+}
+
+/* Styling for the select when it has focus */
+#option .select:focus {
+  outline: none;  /* Remove the default outline */
+  box-shadow: 0 0 10px #719ECE;  /* Add a box shadow */
+}
+
+/* Styling for the additional filter box within the option section */
+#option .input[type=number]{
+  padding: 13px 13px;  /* Padding on all sides */
+  align-items: center;  /* Vertically align items in the center */
+  margin-left: 15px;  /* Margin on the left side */
+  background-color: #5fccf7;  /* Background color */
+  border-radius: 8px/8px;  /* Rounded corners */
+  border: none;  /* No border */
+  width: 50px;  /* Fixed width */
+}
+
+/* Styling for the additional filter box when it has focus */
+#option .input[type=number]:focus {
+  outline: none;  /* Remove the default outline */
+  box-shadow: 0 0 10px #719ECE;  /* Add a box shadow */
+}
+
+/* Styling for the additional message within the option section */
+#option .mess{
+  margin-top: 10px;  /* Margin on the top side */
+  margin-left: 25px;  /* Margin on the left side */
+}
+
+
+/* Styling for the content table */
+#content{
+  border-collapse: collapse;  /* Collapse borders into a single line */
+  width: 100%;  /* Full width */
+}
+
+/* Styling for table headers and cells within the content table */
+#content .th, #content .td {
+  padding: 10px;  /* Padding on all sides */
+  text-align: center;  /* Centered text */
+  border: 2px solid rgb(70, 226, 153);  /* Border around the headers and cells */
+  border-radius: 10px;  /* Rounded corners */
+  border-spacing: 4px  /* Space between borders */
+}
+
+/* Styling for table headers within the content table */
+#content .th {
+  background-color: #ddf1da;  /* Background color */
+}
+
+/* Styling for table cells within the content table */
+#content .td {
+  border: 2px solid #010103;  /* Border around the cells */
+}
+
+/* Adjusting the size of the first and last table cells */
+#content .th:first-child, #content .td:first-child,
+#content .th:last-child, #content .td:last-child {
+  width: 30%;  /* Width relative to its container */
+}
+
+/* Styling for the remove button within the content table */
+#content .remove {
+  padding: 5px 10px;  /* Padding on all sides */
+  font-size: 16px;  /* Font size */
+  background-color: #fa9f9f;  /* Background color */
+  color: #2b1313;  /* Text color */
+  border: none;  /* No border */
+  margin-right: 10px;  /* Margin on the right side */
+  cursor: pointer;  /* Change the cursor to a pointer when hovering */
+  border-radius: 16px/16px;  /* Rounded corners */
+  margin-left: 10px;  /* Margin on the left side */
+}
+
+
+/* Media query for devices with a maximum width of 600px */
+@media (max-width: 600px) {
+  /* Styling for the font awesome icon within the header */
+  #header .fa {
+    font-size: 15px;  /* Font size */
+    position: absolute;  /* Positioning relative to the nearest positioned ancestor */
+    right: 4%;  /* Position from the right side */
+  }
+
+  /* Styling for the h2 within the header */
+  #header .h2{
+    font-size: 0.7rem;  /* Font size */
+    margin-top: 19px;  /* Margin on the top side */
+    color: #110101;  /* Text color */
+    position: absolute;  /* Positioning relative to the nearest positioned ancestor */
+    right: 8%;  /* Position from the right side */
+  }
+
+  /* Styling for the option section */
+  #option{
+    padding: 20px;  /* Padding on all sides */
+  }
+
+  /* Styling for the search container within the option section */
+  #option .search-container {
+    position: relative;  /* Positioning context for absolute positioned children */
+    padding-left: 0px;  /* Padding on the left side */
+    display: flex;  /* Use flexbox for layout */
+    align-items: center;  /* Vertically align items in the center */
+    flex-wrap: wrap;  /* Allow items to wrap onto multiple lines */
+  }
+
+  /* Styling for the input wrapper within the search container */
+  #option .input-wrapper {
+    position: relative;  /* Positioning context for absolute positioned children */
+    display: flex;  /* Use flexbox for layout */
+    border: 1px solid #070707;  /* Border around the input wrapper */
+    width: 101%;  /* Width slightly larger than its container */
+    border-radius: 8px/8px;  /* Rounded corners */
+    padding: 8px;  /* Padding on all sides */
+    margin-left: -10px;  /* Negative margin on the left side to offset the width */
+  }
+
+  /* Styling for the filter container within the search container */
+  #option .filter-container {
+    position: absolute;  /* Positioning relative to the nearest positioned ancestor */
+    top: 50%;  /* Position at the vertical center */
+    transform: translateY(-50%);  /* Offset by half of its own height to center vertically */
+    border: 0;  /* No border */
+    margin-left: 55%;  /* Margin on the left side */
+  }
+
+  /* Styling for the search input within the input wrapper */
+  #option .search-input {
+    font-size: 16px;  /* Font size */
+    width: 500px;  /* Fixed width */
+    border: 1px solid #b9b9b9;  /* Border around the search input */
+    border-radius: 8px/8px;  /* Rounded corners */
+    max-width: 50%;  /* Maximum width */
+    margin-left: 15px;  /* Margin on the left side */
+  }
+
+  /* Styling for the slide and filter within the option section */
+  #option .slide, #option .filter {
+    display: flex;  /* Use flexbox for layout */
+    margin-top: 10px;  /* Margin on the top side */
+    margin-left: 5px;  /* Margin on the left side */
+    align-items: center;  /* Vertically align items in the center */
+    margin-right: 10px;  /* Margin on the right side */
+  }
+
+  /* Styling for the additional filter box within the option section */
+  #option .filterbox{
+    align-items: center;  /* Vertically align items in the center */
+    margin-top: 0px;  /* No margin on the top side */
+    margin-left: 15px;  /* Margin on the left side */
+  }
+
+  /* Styling for the slider input within the slide */
+  #option .slide .slider-input {
+    -webkit-appearance: none;  /* Remove the default appearance */
+    width: 30%;  /* Width relative to its container */
+    height: 5px;  /* Fixed height */
+    background: #1fbb99;  /* Background color */
+    outline: none;  /* Remove the default outline */
+    border-radius: 5px;  /* Rounded corners */
+    max-width: 500px;  /* Maximum width */
+    margin-bottom: 8px;  /* Margin on the bottom side */
+  }
+
+  /* Styling for the slider thumb */
+  #option .slide .slider-input::-webkit-slider-thumb {
+    -webkit-appearance: none;  /* Remove the default appearance */
+    appearance: none;  /* Remove the default appearance */
+    width: 3px;  /* Fixed width */
+    height: 15px;  /* Fixed height */
+    background: #ad9c03;  /* Background color */
+    border-radius: 0%;  /* No rounded corners */
+    cursor: pointer;  /* Change the cursor to a pointer when hovering */
+  }
+
+  /* Styling for the search icon within the search container */
+  #option .search-icon {
+    position: absolute;  /* Positioning relative to the nearest positioned ancestor */
+    left: 6px;  /* Position from the left side */
+    top: 50%;  /* Position at the vertical center */
+    transform: translateY(-50%);  /* Offset by half of its own height to center vertically */
+  }
+
+  /* Styling for the search and update buttons within the option section */
+  #option .search, #option .updata {
+    padding: 2px 5px;  /* Padding on all sides */
+    size: 5%;  /* Size relative to its container */
+    font-size: 16px;  /* Font size */
+    background-color: #72baf5;  /* Background color */
+    color: #2b1313;  /* Text color */
+    border: none;  /* No border */
+    cursor: pointer;  /* Change the cursor to a pointer when hovering */
+    border-radius: 16px/16px;  /* Rounded corners */
+    margin-left: 15px;  /* Margin on the left side */
+    border: 1px solid #070707;  /* Border around the buttons */
+  }
+
+  /* Styling for the select within the option section */
+  #option .select{
+    align-items: center;  /* Vertically align items in the center */
+    padding: 1px 1px;  /* Padding on all sides */
+    background-color: #f7f7f7;  /* Background color */
+    border-radius: 16px/16px;  /* Rounded corners */
+    border: none;  /* No border */
+    margin-left: 20px;  /* Margin on the left side */
+    margin-bottom: 1px;  /* Margin on the bottom side */
+  }
+
+  /* Styling for the select when it has focus */
+  #option .select:focus {
+    outline: none;  /* Remove the default outline */
+    box-shadow: 0 0 10px #719ECE;  /* Add a box shadow */
+  }
+
+  /* Styling for the additional filter box within the option section */
+  #option .input[type=number]{
+    padding: 2px 2px;  /* Padding on all sides */
+    align-items: center;  /* Vertically align items in the center */
+    margin-left: 16px;  /* Margin on the left side */
+    background-color: #85c5fa;  /* Background color */
+    border-radius: 16px/16px;  /* Rounded corners */
+    border: none;  /* No border */
+    width: 55px;  /* Fixed width */
+    margin-bottom: 1px;  /* Margin on the bottom side */
+  }
+
+  /* Styling for the additional filter box when it has focus */
+  #option .input[type=number]:focus {
+    outline: none;  /* Remove the default outline */
+    box-shadow: 0 0 10px #719ECE;  /* Add a box shadow */
+  }
+
+  /* Styling for the additional message within the option section */
+  #option .mess{
+    margin-top: 10px;  /* Margin on the top side */
+    margin-left: 25px;  /* Margin on the left side */
+  }
+
+  /* Styling for the chatbot container */
+  #chatbot-container {
+    border: 1px solid #ccc;  /* Border around the chatbot container */
+    border-radius: 5px;  /* Rounded corners */
+    padding: 10px;  /* Padding on all sides */
+    margin-top: 20px;  /* Margin on the top side */
+  }
+
+  /* Styling for the chat header */
+  #chat-header {
+    background-color: #333;  /* Background color */
+    color: #fff;  /* Text color */
+    padding: 10px;  /* Padding on all sides */
+    text-align: center;  /* Centered text */
+  }
+
+  /* Styling for the chat messages */
+  #chat-messages {
+    min-height: 200px;  /* Minimum height */
+    border: 1px solid #ccc;  /* Border around the chat messages */
+    border-radius: 5px;  /* Rounded corners */
+    padding: 10px;  /* Padding on all sides */
+    overflow-y: scroll;  /* Allow vertical scrolling */
+    max-height: 200px;  /* Maximum height */
+    margin-left: 5%;  /* Margin on the left side */
+  }
+
+  /* Styling for the user input */
+  #user-input {
+    display: flex;  /* Use flexbox for layout */
+    align-items: center;  /* Vertically align items in the center */
+    gap: 10px;  /* Space between items */
+    margin-left: 5%;  /* Margin on the left side */
+  }
+
+  /* Styling for the input within the user input */
+  #user-input input {
+    flex: 1;  /* Take up remaining space */
+    border: 1px solid #ccc;  /* Border around the input */
+    border-radius: 5px;  /* Rounded corners */
+    padding: 5px;  /* Padding on all sides */
+    margin-left: 5%;  /* Margin on the left side */
+  }
+
+  /* Styling for the button within the user input */
+  #user-input button {
+    background-color: #333;  /* Background color */
+    color: #fff;  /* Text color */
+    border: none;  /* No border */
+    border-radius: 5px;  /* Rounded corners */
+    padding: 5px 10px;  /* Padding on all sides */
+    cursor: pointer;  /* Change the cursor to a pointer when hovering */
+    margin-left: 5%;  /* Margin on the left side */
+  }
+}
+

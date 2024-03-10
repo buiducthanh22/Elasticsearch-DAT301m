@@ -1,0 +1,61 @@
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: inherit;
+  margin-left: 5px;
+}
+
+/* Styling for table headers and cells */
+th, td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 0.5px solid #3d5e54;
+  border: 1px solid #2c2c38;
+  border-radius: 8px/8px;
+}
+
+/* Styling for table headers */
+th {
+  background-color: #5286b1;
+  color: rgb(0, 0, 0);
+  border-radius: 16px/16px;
+}
+
+/* Hover effect for table rows */
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Pagination styling */
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+  margin-right: 1.8%;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 16px/16px;
+}
+
+/* Styling for pagination buttons */
+.pagination button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  border-radius: 16px/16px;
+}
+
+/* Styling for disabled pagination buttons */
+.pagination button[disabled] {
+  background-color: #bbb;
+  cursor: not-allowed;
+  border-radius: 16px/16px;
+}
+
+/* Additional styling for show class */
+.show {
+  margin-left: 10px;
+}
